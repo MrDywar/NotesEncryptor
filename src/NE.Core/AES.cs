@@ -1,15 +1,16 @@
-﻿using System;
+﻿using NE.Core;
+using System;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
 namespace NotesEncryptor
 {
-    public class AES
+    public class AES : IEncryptor
     {
         private static readonly byte[] IV = new byte[16];
 
-        public static byte[] EncryptStringToBytes_Aes(string plainText, string key)
+        public byte[] Encrypt(string plainText, string key)
         {
             // Check arguments.
             if (plainText == null || plainText.Length <= 0)
@@ -47,7 +48,7 @@ namespace NotesEncryptor
             return encrypted;
         }
 
-        public static string DecryptStringFromBytes_Aes(byte[] cipherText, string key)
+        public string Decrypt(byte[] cipherText, string key)
         {
             // Check arguments.
             if (cipherText == null || cipherText.Length <= 0)

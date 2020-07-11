@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NE.Core;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -10,13 +11,19 @@ namespace NotesEncryptor
 {
     public partial class Form1 : Form
     {
+        private readonly IEncryptor _encryptor;
+        private readonly IFileOperator _fileOperator;
+
         private readonly string FileFullNameArg = "-f=";
         private SearchNavigator _searchNavigator;
         private Encoding _currentEncoding = Encoding.Default;
 
-        public Form1(string[] args)
+        public Form1(IEncryptor encryptor, IFileOperator fileOperator)
         {
             InitializeComponent();
+
+            this._encryptor = encryptor;
+            this._fileOperator = fileOperator;
 
             this.cb_encoding.DataSource = new List<Encoding>()
             {
@@ -33,7 +40,7 @@ namespace NotesEncryptor
 
             this._searchNavigator = new SearchNavigator();
 
-            this.ProcessCommandArgs(args);
+            this.ProcessCommandArgs(Environment.GetCommandLineArgs());
         }
 
         private void ProcessCommandArgs(string[] args)
@@ -69,7 +76,7 @@ namespace NotesEncryptor
                     {
                         this.tb_filePath.Text = openFileDialog.FileName;
 
-                        this.rtb_content.Text = File.ReadAllText(this.tb_filePath.Text, this._currentEncoding);
+                        this.rtb_content.Text = this._fileOperator.Read(this.tb_filePath.Text, this._currentEncoding);
                     }
                 }
             });
@@ -82,7 +89,7 @@ namespace NotesEncryptor
                 if (string.IsNullOrWhiteSpace(this.tb_filePath.Text))
                     return;
 
-                File.WriteAllText(this.tb_filePath.Text, this.rtb_content.Text, this._currentEncoding);
+                this._fileOperator.Write(this.tb_filePath.Text, this.rtb_content.Text, this._currentEncoding);
             });
         }
 
@@ -90,7 +97,7 @@ namespace NotesEncryptor
         {
             ExecuteActionWithCheck(() =>
             {
-                var ecrypted = AES.EncryptStringToBytes_Aes(this.rtb_content.Text, this.tb_password.Text);
+                var ecrypted = this._encryptor.Encrypt(this.rtb_content.Text, this.tb_password.Text);
 
                 this.rtb_content.Text = Convert.ToBase64String(ecrypted);
             });
@@ -101,7 +108,7 @@ namespace NotesEncryptor
             ExecuteActionWithCheck(() =>
             {
                 var ecrypted = Convert.FromBase64String(this.rtb_content.Text);
-                var text = AES.DecryptStringFromBytes_Aes(ecrypted, this.tb_password.Text);
+                var text = this._encryptor.Decrypt(ecrypted, this.tb_password.Text);
 
                 this.rtb_content.Text = text;
             });
@@ -192,7 +199,7 @@ namespace NotesEncryptor
 
         private void LoadFile(string fileFullName)
         {
-            if (!File.Exists(fileFullName))
+            if (!this._fileOperator.Exists(fileFullName))
             {
                 DisplayErrorMsg("File not exists, or you don't have required permissions.");
                 return;
@@ -202,7 +209,7 @@ namespace NotesEncryptor
             {
                 this.tb_filePath.Text = fileFullName;
 
-                this.rtb_content.Text = File.ReadAllText(this.tb_filePath.Text, this._currentEncoding);
+                this.rtb_content.Text = this._fileOperator.Read(this.tb_filePath.Text, this._currentEncoding);
             });
         }
 

@@ -1,10 +1,14 @@
-﻿using System;
+﻿using Autofac;
+using Autofac.Core;
+using System;
 using System.Windows.Forms;
 
 namespace NotesEncryptor
 {
     static class Program
     {
+        private static IContainer container;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -13,7 +17,10 @@ namespace NotesEncryptor
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(args));
+
+            container = DependencyInjection.CreateContainer();
+
+            Application.Run(container.Resolve<Form1>());
         }
     }
 }
