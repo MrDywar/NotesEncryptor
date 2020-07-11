@@ -44,6 +44,7 @@
             this.btn_ScrollPrev = new System.Windows.Forms.Button();
             this.lb_searchedWordsCount = new System.Windows.Forms.Label();
             this.lb_searchedWords = new System.Windows.Forms.Label();
+            this.cb_encoding = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // rtb_content
@@ -220,12 +221,23 @@
             this.lb_searchedWords.TabIndex = 14;
             this.lb_searchedWords.Text = "Searched words count:";
             // 
+            // cb_encoding
+            // 
+            this.cb_encoding.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_encoding.FormattingEnabled = true;
+            this.cb_encoding.Location = new System.Drawing.Point(975, 47);
+            this.cb_encoding.Name = "cb_encoding";
+            this.cb_encoding.Size = new System.Drawing.Size(213, 24);
+            this.cb_encoding.TabIndex = 15;
+            this.cb_encoding.SelectedValueChanged += new System.EventHandler(this.cb_encoding_SelectedValueChanged);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1205, 554);
+            this.Controls.Add(this.cb_encoding);
             this.Controls.Add(this.lb_searchedWords);
             this.Controls.Add(this.lb_searchedWordsCount);
             this.Controls.Add(this.btn_ScrollPrev);
@@ -269,6 +281,7 @@
         private System.Windows.Forms.Button btn_ScrollPrev;
         private System.Windows.Forms.Label lb_searchedWordsCount;
         private System.Windows.Forms.Label lb_searchedWords;
+        private System.Windows.Forms.ComboBox cb_encoding;
     }
 }
 

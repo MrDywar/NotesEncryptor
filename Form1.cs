@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -11,10 +12,21 @@ namespace NotesEncryptor
     {
         private readonly string FileFullNameArg = "-f=";
         private SearchNavigator _searchNavigator;
+        private Encoding _currentEncoding = Encoding.Default;
 
         public Form1(string[] args)
         {
             InitializeComponent();
+
+            this.cb_encoding.DataSource = new List<Encoding>()
+            {
+                Encoding.Default,
+                Encoding.UTF8,
+                Encoding.ASCII,
+                Encoding.Unicode,
+                Encoding.BigEndianUnicode
+            };
+            this.cb_encoding.DisplayMember = nameof(Encoding.EncodingName);
 
             this.bt_encrypt.Enabled = false;
             this.bt_decrypt.Enabled = false;
@@ -39,6 +51,12 @@ namespace NotesEncryptor
             }
         }
 
+        private void cb_encoding_SelectedValueChanged(object sender, EventArgs e)
+        {
+            var cmb = (ComboBox)sender;
+            this._currentEncoding = (Encoding)cmb.SelectedItem;
+        }
+
         private void bt_open_Click(object sender, EventArgs e)
         {
             ExecuteActionWithCheck(() =>
@@ -51,7 +69,7 @@ namespace NotesEncryptor
                     {
                         this.tb_filePath.Text = openFileDialog.FileName;
 
-                        this.rtb_content.Text = File.ReadAllText(this.tb_filePath.Text, Encoding.Default);
+                        this.rtb_content.Text = File.ReadAllText(this.tb_filePath.Text, this._currentEncoding);
                     }
                 }
             });
@@ -64,7 +82,7 @@ namespace NotesEncryptor
                 if (string.IsNullOrWhiteSpace(this.tb_filePath.Text))
                     return;
 
-                File.WriteAllText(this.tb_filePath.Text, this.rtb_content.Text);
+                File.WriteAllText(this.tb_filePath.Text, this.rtb_content.Text, this._currentEncoding);
             });
         }
 
@@ -184,7 +202,7 @@ namespace NotesEncryptor
             {
                 this.tb_filePath.Text = fileFullName;
 
-                this.rtb_content.Text = File.ReadAllText(this.tb_filePath.Text, Encoding.Default);
+                this.rtb_content.Text = File.ReadAllText(this.tb_filePath.Text, this._currentEncoding);
             });
         }
 
