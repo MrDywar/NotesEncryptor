@@ -1,12 +1,11 @@
-﻿using NE.Core;
-using System;
+﻿using System;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace NotesEncryptor
+namespace NE.Core.Encryption
 {
-    public class AES : IEncryptor
+    public class AESEncryption : IEncryptor
     {
         private static readonly byte[] IV = new byte[16];
 

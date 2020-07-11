@@ -1,11 +1,7 @@
 ﻿using Autofac;
-using Autofac.Core;
 using NE.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using NE.Core.Encryption;
+using NE.Infrastructure.IO;
 
 namespace NotesEncryptor
 {
@@ -15,7 +11,7 @@ namespace NotesEncryptor
         {
             var builder = new ContainerBuilder();
 
-            builder.RegisterType<AES>().As<IEncryptor>();
+            builder.RegisterType<AESEncryption>().As<IEncryptor>();
             builder.RegisterType<WFileOperator>().As<IFileOperator>();
             builder.RegisterType<Form1>();
 

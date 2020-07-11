@@ -111,6 +111,10 @@
       <Project>{49386e66-007d-43f9-b480-78e27ec47a25}</Project>
       <Name>NE.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NE.Infrastructure\NE.Infrastructure.csproj">
+      <Project>{c3303aa9-2420-4535-b585-eef6fa0e2dbe}</Project>
+      <Name>NE.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

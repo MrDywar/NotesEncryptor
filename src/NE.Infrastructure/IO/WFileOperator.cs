@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using NE.Core;
 using System.IO;
 using System.Text;
 
-namespace NE.Core
+namespace NE.Infrastructure.IO
 {
     public class WFileOperator : IFileOperator
     {

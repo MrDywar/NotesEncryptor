@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace NE.Core
+﻿namespace NE.Core.Encryption
 {
     public interface IEncryptor
     {

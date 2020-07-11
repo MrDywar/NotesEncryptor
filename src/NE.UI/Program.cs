@@ -1,5 +1,4 @@
 ﻿using Autofac;
-using Autofac.Core;
 using System;
 using System.Windows.Forms;
 
