@@ -179,6 +179,11 @@ namespace NotesEncryptor
             this.bt_decrypt.Enabled = isPasswordValid;
         }
 
+        private void cb_showPass_CheckedChanged(object sender, EventArgs e)
+        {
+            this.tb_password.UseSystemPasswordChar = !((sender as CheckBox).Checked);
+        }
+
         private void Form1_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))

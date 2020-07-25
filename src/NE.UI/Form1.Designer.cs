@@ -45,6 +45,7 @@
             this.lb_searchedWordsCount = new System.Windows.Forms.Label();
             this.lb_searchedWords = new System.Windows.Forms.Label();
             this.cb_encoding = new System.Windows.Forms.ComboBox();
+            this.cb_showPass = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // rtb_content
@@ -56,14 +57,14 @@
             this.rtb_content.Location = new System.Drawing.Point(17, 116);
             this.rtb_content.Margin = new System.Windows.Forms.Padding(4);
             this.rtb_content.Name = "rtb_content";
-            this.rtb_content.Size = new System.Drawing.Size(949, 422);
+            this.rtb_content.Size = new System.Drawing.Size(949, 525);
             this.rtb_content.TabIndex = 0;
             this.rtb_content.Text = "";
             // 
             // bt_save
             // 
             this.bt_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_save.Location = new System.Drawing.Point(1036, 475);
+            this.bt_save.Location = new System.Drawing.Point(1036, 578);
             this.bt_save.Margin = new System.Windows.Forms.Padding(4);
             this.bt_save.Name = "bt_save";
             this.bt_save.Size = new System.Drawing.Size(153, 64);
@@ -90,8 +91,9 @@
             this.tb_password.Margin = new System.Windows.Forms.Padding(4);
             this.tb_password.MaxLength = 15;
             this.tb_password.Name = "tb_password";
-            this.tb_password.Size = new System.Drawing.Size(707, 41);
+            this.tb_password.Size = new System.Drawing.Size(532, 41);
             this.tb_password.TabIndex = 3;
+            this.tb_password.UseSystemPasswordChar = true;
             this.tb_password.WordWrap = false;
             this.tb_password.TextChanged += new System.EventHandler(this.tb_password_TextChanged);
             // 
@@ -231,12 +233,24 @@
             this.cb_encoding.TabIndex = 15;
             this.cb_encoding.SelectedValueChanged += new System.EventHandler(this.cb_encoding_SelectedValueChanged);
             // 
+            // cb_showPass
+            // 
+            this.cb_showPass.AutoSize = true;
+            this.cb_showPass.Location = new System.Drawing.Point(679, 69);
+            this.cb_showPass.Name = "cb_showPass";
+            this.cb_showPass.Size = new System.Drawing.Size(126, 21);
+            this.cb_showPass.TabIndex = 16;
+            this.cb_showPass.Text = "show password";
+            this.cb_showPass.UseVisualStyleBackColor = true;
+            this.cb_showPass.CheckedChanged += new System.EventHandler(this.cb_showPass_CheckedChanged);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1205, 554);
+            this.ClientSize = new System.Drawing.Size(1205, 657);
+            this.Controls.Add(this.cb_showPass);
             this.Controls.Add(this.cb_encoding);
             this.Controls.Add(this.lb_searchedWords);
             this.Controls.Add(this.lb_searchedWordsCount);
@@ -282,6 +296,7 @@
         private System.Windows.Forms.Label lb_searchedWordsCount;
         private System.Windows.Forms.Label lb_searchedWords;
         private System.Windows.Forms.ComboBox cb_encoding;
+        private System.Windows.Forms.CheckBox cb_showPass;
     }
 }
 
