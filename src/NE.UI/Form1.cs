@@ -45,12 +45,10 @@ namespace NotesEncryptor
 
         private void ProcessCommandArgs(string[] args)
         {
-            if (args?.Length == 0)
-                return;
-
-            if (args[0].StartsWith(this.FileFullNameArg))
+            var fileToOpenArg = args.FirstOrDefault(x => x.StartsWith(this.FileFullNameArg));
+            if (!string.IsNullOrWhiteSpace(fileToOpenArg))
             {
-                var fileFullName = args[0]
+                var fileFullName = fileToOpenArg
                     .Replace(this.FileFullNameArg, string.Empty)
                     .Replace("\"", string.Empty);
 
