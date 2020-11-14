@@ -120,29 +120,27 @@ namespace NotesEncryptor
 
             _searchNavigator.Clear();
 
-            int startindex = 0;
-            while (startindex < rtb_content.TextLength)
+            int nextStartindex = 0;
+            while (nextStartindex < rtb_content.TextLength)
             {
-                int wordstartIndex = rtb_content.Find(word, startindex, RichTextBoxFinds.None);
-                if (wordstartIndex != -1)
-                {
-                    rtb_content.SelectionStart = wordstartIndex;
-                    rtb_content.SelectionLength = word.Length;
-                    rtb_content.SelectionBackColor = Color.Yellow;
-
-                    _searchNavigator.AddIndex(wordstartIndex);
-                }
-                else
-                {
+                int wordStartIndex = rtb_content.Find(word, nextStartindex, RichTextBoxFinds.None);
+                if (wordStartIndex == -1)
                     break;
-                }
 
-                startindex += wordstartIndex + word.Length;
+                rtb_content.SelectionStart = wordStartIndex;
+                rtb_content.SelectionLength = word.Length;
+                rtb_content.SelectionBackColor = Color.Yellow;
+
+                _searchNavigator.AddIndex(wordStartIndex);
+
+                nextStartindex += wordStartIndex + word.Length;
             }
 
             rtb_content.SelectionStart = 0;
             rtb_content.SelectionLength = rtb_content.TextLength;
             rtb_content.SelectionColor = Color.Black;
+
+            rtb_content.SelectionLength = 0;
 
             lb_searchedWordsCount.Text = _searchNavigator.Count.ToString();
         }
