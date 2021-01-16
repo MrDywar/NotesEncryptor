@@ -53,21 +53,21 @@
             this.rtb_content.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtb_content.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rtb_content.Location = new System.Drawing.Point(17, 116);
-            this.rtb_content.Margin = new System.Windows.Forms.Padding(4);
+            this.rtb_content.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rtb_content.Location = new System.Drawing.Point(17, 145);
+            this.rtb_content.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rtb_content.Name = "rtb_content";
-            this.rtb_content.Size = new System.Drawing.Size(949, 525);
+            this.rtb_content.Size = new System.Drawing.Size(949, 655);
             this.rtb_content.TabIndex = 0;
             this.rtb_content.Text = "";
             // 
             // bt_save
             // 
             this.bt_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_save.Location = new System.Drawing.Point(1036, 578);
-            this.bt_save.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_save.Location = new System.Drawing.Point(1036, 722);
+            this.bt_save.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bt_save.Name = "bt_save";
-            this.bt_save.Size = new System.Drawing.Size(153, 64);
+            this.bt_save.Size = new System.Drawing.Size(153, 80);
             this.bt_save.TabIndex = 1;
             this.bt_save.Text = "Save";
             this.bt_save.UseVisualStyleBackColor = true;
@@ -75,10 +75,10 @@
             // 
             // bt_open
             // 
-            this.bt_open.Location = new System.Drawing.Point(17, 12);
-            this.bt_open.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_open.Location = new System.Drawing.Point(17, 15);
+            this.bt_open.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bt_open.Name = "bt_open";
-            this.bt_open.Size = new System.Drawing.Size(113, 28);
+            this.bt_open.Size = new System.Drawing.Size(113, 35);
             this.bt_open.TabIndex = 2;
             this.bt_open.Text = "Open";
             this.bt_open.UseVisualStyleBackColor = true;
@@ -86,9 +86,9 @@
             // 
             // tb_password
             // 
-            this.tb_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tb_password.Location = new System.Drawing.Point(139, 59);
-            this.tb_password.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tb_password.Location = new System.Drawing.Point(139, 74);
+            this.tb_password.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_password.MaxLength = 15;
             this.tb_password.Name = "tb_password";
             this.tb_password.Size = new System.Drawing.Size(532, 41);
@@ -100,19 +100,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 59);
+            this.label1.Location = new System.Drawing.Point(56, 74);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 17);
+            this.label1.Size = new System.Drawing.Size(73, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Password:";
             // 
             // bt_encrypt
             // 
-            this.bt_encrypt.Location = new System.Drawing.Point(855, 47);
-            this.bt_encrypt.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_encrypt.Location = new System.Drawing.Point(855, 59);
+            this.bt_encrypt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bt_encrypt.Name = "bt_encrypt";
-            this.bt_encrypt.Size = new System.Drawing.Size(113, 28);
+            this.bt_encrypt.Size = new System.Drawing.Size(113, 35);
             this.bt_encrypt.TabIndex = 5;
             this.bt_encrypt.Text = "Encrypt";
             this.bt_encrypt.UseVisualStyleBackColor = true;
@@ -120,10 +120,10 @@
             // 
             // bt_decrypt
             // 
-            this.bt_decrypt.Location = new System.Drawing.Point(855, 82);
-            this.bt_decrypt.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_decrypt.Location = new System.Drawing.Point(855, 102);
+            this.bt_decrypt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bt_decrypt.Name = "bt_decrypt";
-            this.bt_decrypt.Size = new System.Drawing.Size(113, 28);
+            this.bt_decrypt.Size = new System.Drawing.Size(113, 35);
             this.bt_decrypt.TabIndex = 6;
             this.bt_decrypt.Text = "Decrypt";
             this.bt_decrypt.UseVisualStyleBackColor = true;
@@ -133,9 +133,9 @@
             // 
             this.tb_filePath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_filePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tb_filePath.Location = new System.Drawing.Point(139, 15);
-            this.tb_filePath.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_filePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tb_filePath.Location = new System.Drawing.Point(139, 19);
+            this.tb_filePath.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_filePath.Name = "tb_filePath";
             this.tb_filePath.ReadOnly = true;
             this.tb_filePath.Size = new System.Drawing.Size(1049, 23);
@@ -145,10 +145,10 @@
             // bt_search
             // 
             this.bt_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_search.Location = new System.Drawing.Point(1088, 167);
-            this.bt_search.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_search.Location = new System.Drawing.Point(1088, 209);
+            this.bt_search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bt_search.Name = "bt_search";
-            this.bt_search.Size = new System.Drawing.Size(113, 28);
+            this.bt_search.Size = new System.Drawing.Size(113, 35);
             this.bt_search.TabIndex = 8;
             this.bt_search.Text = "Search";
             this.bt_search.UseVisualStyleBackColor = true;
@@ -157,21 +157,21 @@
             // tb_search
             // 
             this.tb_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_search.Location = new System.Drawing.Point(976, 116);
-            this.tb_search.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_search.Location = new System.Drawing.Point(976, 145);
+            this.tb_search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_search.MaxLength = 10;
             this.tb_search.Name = "tb_search";
-            this.tb_search.Size = new System.Drawing.Size(224, 22);
+            this.tb_search.Size = new System.Drawing.Size(224, 27);
             this.tb_search.TabIndex = 9;
             this.tb_search.WordWrap = false;
             // 
             // bt_clear
             // 
             this.bt_clear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_clear.Location = new System.Drawing.Point(1088, 203);
-            this.bt_clear.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_clear.Location = new System.Drawing.Point(1088, 254);
+            this.bt_clear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bt_clear.Name = "bt_clear";
-            this.bt_clear.Size = new System.Drawing.Size(113, 28);
+            this.bt_clear.Size = new System.Drawing.Size(113, 35);
             this.bt_clear.TabIndex = 10;
             this.bt_clear.Text = "Clear";
             this.bt_clear.UseVisualStyleBackColor = true;
@@ -180,10 +180,10 @@
             // btn_ScrollNext
             // 
             this.btn_ScrollNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_ScrollNext.Location = new System.Drawing.Point(1023, 167);
-            this.btn_ScrollNext.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_ScrollNext.Location = new System.Drawing.Point(1023, 209);
+            this.btn_ScrollNext.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_ScrollNext.Name = "btn_ScrollNext";
-            this.btn_ScrollNext.Size = new System.Drawing.Size(35, 28);
+            this.btn_ScrollNext.Size = new System.Drawing.Size(35, 35);
             this.btn_ScrollNext.TabIndex = 11;
             this.btn_ScrollNext.Text = ">";
             this.btn_ScrollNext.UseVisualStyleBackColor = true;
@@ -192,10 +192,10 @@
             // btn_ScrollPrev
             // 
             this.btn_ScrollPrev.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_ScrollPrev.Location = new System.Drawing.Point(980, 167);
-            this.btn_ScrollPrev.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_ScrollPrev.Location = new System.Drawing.Point(980, 209);
+            this.btn_ScrollPrev.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_ScrollPrev.Name = "btn_ScrollPrev";
-            this.btn_ScrollPrev.Size = new System.Drawing.Size(35, 28);
+            this.btn_ScrollPrev.Size = new System.Drawing.Size(35, 35);
             this.btn_ScrollPrev.TabIndex = 12;
             this.btn_ScrollPrev.Text = "<";
             this.btn_ScrollPrev.UseVisualStyleBackColor = true;
@@ -205,10 +205,10 @@
             // 
             this.lb_searchedWordsCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_searchedWordsCount.AutoSize = true;
-            this.lb_searchedWordsCount.Location = new System.Drawing.Point(1152, 144);
+            this.lb_searchedWordsCount.Location = new System.Drawing.Point(1152, 180);
             this.lb_searchedWordsCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_searchedWordsCount.Name = "lb_searchedWordsCount";
-            this.lb_searchedWordsCount.Size = new System.Drawing.Size(16, 17);
+            this.lb_searchedWordsCount.Size = new System.Drawing.Size(17, 20);
             this.lb_searchedWordsCount.TabIndex = 13;
             this.lb_searchedWordsCount.Text = "0";
             // 
@@ -216,10 +216,10 @@
             // 
             this.lb_searchedWords.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_searchedWords.AutoSize = true;
-            this.lb_searchedWords.Location = new System.Drawing.Point(976, 144);
+            this.lb_searchedWords.Location = new System.Drawing.Point(976, 180);
             this.lb_searchedWords.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_searchedWords.Name = "lb_searchedWords";
-            this.lb_searchedWords.Size = new System.Drawing.Size(153, 17);
+            this.lb_searchedWords.Size = new System.Drawing.Size(158, 20);
             this.lb_searchedWords.TabIndex = 14;
             this.lb_searchedWords.Text = "Searched words count:";
             // 
@@ -227,18 +227,20 @@
             // 
             this.cb_encoding.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_encoding.FormattingEnabled = true;
-            this.cb_encoding.Location = new System.Drawing.Point(975, 47);
+            this.cb_encoding.Location = new System.Drawing.Point(975, 59);
+            this.cb_encoding.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cb_encoding.Name = "cb_encoding";
-            this.cb_encoding.Size = new System.Drawing.Size(213, 24);
+            this.cb_encoding.Size = new System.Drawing.Size(213, 28);
             this.cb_encoding.TabIndex = 15;
             this.cb_encoding.SelectedValueChanged += new System.EventHandler(this.cb_encoding_SelectedValueChanged);
             // 
             // cb_showPass
             // 
             this.cb_showPass.AutoSize = true;
-            this.cb_showPass.Location = new System.Drawing.Point(679, 69);
+            this.cb_showPass.Location = new System.Drawing.Point(679, 86);
+            this.cb_showPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cb_showPass.Name = "cb_showPass";
-            this.cb_showPass.Size = new System.Drawing.Size(126, 21);
+            this.cb_showPass.Size = new System.Drawing.Size(132, 24);
             this.cb_showPass.TabIndex = 16;
             this.cb_showPass.Text = "show password";
             this.cb_showPass.UseVisualStyleBackColor = true;
@@ -247,9 +249,9 @@
             // Form1
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1205, 657);
+            this.ClientSize = new System.Drawing.Size(1205, 821);
             this.Controls.Add(this.cb_showPass);
             this.Controls.Add(this.cb_encoding);
             this.Controls.Add(this.lb_searchedWords);
@@ -268,7 +270,7 @@
             this.Controls.Add(this.bt_save);
             this.Controls.Add(this.rtb_content);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Notes Encryptor";
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.Form1_DragDrop);
