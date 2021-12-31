@@ -8,6 +8,7 @@
 
     <RootNamespace>NotesEncryptor</RootNamespace>
     <AssemblyName>NotesEncryptor</AssemblyName>
+    <ApplicationIcon>Rafiqul-Hassan-Blogger-Key.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>

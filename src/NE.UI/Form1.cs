@@ -133,7 +133,7 @@ namespace NotesEncryptor
 
                 _searchNavigator.AddIndex(wordStartIndex);
 
-                nextStartindex += wordStartIndex + word.Length;
+                nextStartindex = wordStartIndex + word.Length;
             }
 
             rtb_content.SelectionStart = 0;
